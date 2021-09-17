@@ -10,6 +10,7 @@ class UserSerializer(serializers.Serializer):
     description = serializers.CharField()
     created = serializers.CharField()
 
+
 class AbonentSerializer(serializers.Serializer):
     id = serializers.CharField()
     displayName = serializers.CharField()
