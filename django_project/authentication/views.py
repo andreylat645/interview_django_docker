@@ -11,11 +11,15 @@ class UserViewSet(viewsets.ViewSet):
     def list(self, request):
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
-        return Response(serializer.data)
+        r = Response(serializer.data)
+        print("Status code: " + str(r.status_code))
+        return r
 
 
 class AbonentViewSet(viewsets.ViewSet):
     def list(self, request):
         abonents = Abonent.objects.all()
         serializer = AbonentSerializer(abonents, many=True)
-        return Response(serializer.data)
+        r = Response(serializer.data)
+        print("Status code: " + str(r.status_code))
+        return r
